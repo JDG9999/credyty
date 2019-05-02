@@ -6,7 +6,7 @@ def tripleta(suma):
     Parametros:
     suma (int): La suma que deben satisfacer los números de la tripleta
     Retorna:
-    str: Los números de la tripleta y su producto (si existen)
+    str: Cadena con la información de los números de la tripleta y su producto (si existen)
     """
     for a in range(1, suma):
         for b in range((a+1), suma):
@@ -21,9 +21,11 @@ def main():
     """
     Método que arranca la aplicación y mide el tiempo de ejecución.
     """
-    inicio = time.time()
+    inicio = time.clock()
     print(tripleta(1000))
-    print(str(time.time() - inicio) + "s de ejecución")
+    fin = time.clock()
+    ejecucion = fin - inicio
+    print("{0}s de tiempo de ejecución".format(ejecucion))
     
 if __name__ == "__main__":
     main()
