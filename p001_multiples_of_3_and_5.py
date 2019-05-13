@@ -2,10 +2,14 @@ import time
 
 def multiples(max, numbers):
     sum = 0
-    for number in numbers:
+    added = set()
+    for i, number in enumerate(numbers):
+        other_fact = numbers[:i]
         multiple = number
         while multiple < max:
-            sum += multiple
+            mods = [multiple % other for other in other_fact]
+            if 0 not in mods:
+                sum += multiple
             multiple += number
     return "The sum is {0}".format(sum)
 
