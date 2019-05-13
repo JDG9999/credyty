@@ -2,7 +2,6 @@ import time
 
 def multiples(max, numbers):
     sum = 0
-    added = set()
     for i, number in enumerate(numbers):
         other_fact = numbers[:i]
         multiple = number
